@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+header {
+    font-weight: 100;
+    background: rgb(7, 42, 117);
+}
+
+.navbar {
+    background: rgb(7, 42, 117);
+    height: 40px;
+}
+
+.nav-link {
+    color: white;
+}
+
+#div {
+    float: left;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+#centro {
+    padding-left: 90px;
+}
+
+.titulo-producto {
+    padding-left: 50px;
+    padding-top: 15px;
+}
+
+.containerOwnApp {
+    box-shadow: 0 0 27px 0 rgba(84, 84, 84, 0.62);
+    padding-top: 15px;
+}
+
+.login-page {
+    padding: 18% 0 0;
+    margin: 0 auto 100px;
+    max-width: 360px;
+    position: relative;
+}
+
+.login-form {
+    background-color: rgba(22, 50, 95, 0.6);
+}
+
+.login-form-header {
+    padding-top: 16px;
+}
+
+.login-from-row {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.login-form-font-header {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.login-form-font-header span {
+    color: #007C9B;
+}
+
+.login-form-font-header {
+    color: black;
+}
+
+.login-page {
+    margin-top: -42px;
+}
+
+#login {
+    background-image: url(../img/clasico.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#agregar-producto {
+    height: 100vh;
+    width: 100%;
+    margin-top: 40px;
+    background-image: url(../img/clasico.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#crearusuario {
+    background-image: url(../img/apple.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.search {
+    margin: 35px 900px;
+}
+
+table {
+    margin-top: 150px;
+}
+
+.img-fondo {
+    margin-top: 35px;
+    margin-left: 8px;
+}
+
+.collapse-content .fa.fa-heart:hover {
+    color: #f44336 !important;
+}
+
+.collapse-content .fa.fa-share-alt:hover {
+    color: #0d47a1 !important;
+}
+
+.card {
+    width: 580px;
+    height: auto;
+    margin: 100px 380px;
+}
+
+#imagen-detalles {
+    margin-top: -30px;
+}
