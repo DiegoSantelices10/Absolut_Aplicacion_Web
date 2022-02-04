@@ -8,7 +8,7 @@ include '../../views/header-footer/header.php';
 
     <div class="box_user_search container-fluid">
         <div class="welcome_user">
-            <h2>Bienvenido <i><?php echo $_SESSION['usuario']  ?></i></h2>
+            <h2>Bienvenido s <?php echo $_SESSION['usuario'] ?></h2>
         </div>
 
         <div class="search_prod">
@@ -27,60 +27,43 @@ include '../../views/header-footer/header.php';
         <p class="text-center">NUESTROS PRODUCTOS</p>
     </div>
 
-  
 
-    <div class="productos">
-        <?php if (count($productos)) : ?>
-        <?php foreach ($productos as $producto) : ?>
-
-        <div class="producto">
-            <p class="titulo-producto"> <?php echo $producto->nombre ?></p>
-            <a href="producto.php?id=<?php echo $producto->id ?>">
-                <img class="img-responsive" src="../../../../img/<?php echo $producto->imagen ?>" alt="absolut">
-            </a>
-        </div>
-        <?php endforeach; ?>
-        <?php else : ?>
-        <h1>No Hay Bebidas</h1>
-        <?php endif ?>
+<div class="productos">
+    <?php if (count($productos)) : ?>
+    <?php foreach ($productos as $producto) : ?>
+    <div class="producto">
+        <p class="titulo-producto"> <?php echo $producto->nombre ?></p>
+        <a>
+            <img data-toggle="modal" data-target="#modal<?php echo $producto->id ?>" class="p-1 img-responsive z-depth-1 "
+                src="../../../../img/<?php echo $producto->imagen ?>" alt="absolut">
+        </a>
     </div>
+
+
+    <!--Modal: Name-->
+    <div class="modal fade" id="modal<?php echo $producto->id ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body mb-0 p-0">
+                    <div>
+                        <img class="img-fluid" src="../../../../img/fondo/<?php echo $producto->imgfondo ?>" alt="alcohol">
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content:space-between">
+                    <span class="text-center" style="color: rgb(7, 42, 117); font-size: 24px;"><?php echo $producto->nombre ?></span>
+                    <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4 fas fa-times"
+                        data-dismiss="modal"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endforeach; ?>
+    <?php else : ?>
+    <h1>No Hay Bebidas</h1>
+    <?php endif ?>
+
+
 </div>
 
 
-<div class="row">
-
-    <!-- Grid column -->
-    <div class="col-lg-4 col-md-12 mb-4">
-
-        <!--Modal: Name-->
-        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-
-                <!--Content-->
-                <div class="modal-content">
-                    <!--Body-->
-                    <div class="modal-body mb-0 p-0">
-                        <div >
-                            <img class="img-fluid"  src="../../../../img/fondo/citron.JPG" alt="alcohol">
-                        </div>
-                    </div>
-                    <!--Footer-->
-                    <div class="modal-footer justify-content-center">
-                        <span class="mr-4">Absolut</span>
-                        <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4"
-                            data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-                <!--/.Content-->
-            </div>
-        </div>
-        <!--Modal: Name-->
-
-        <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" alt="video"
-                data-toggle="modal" data-target="#modal1"></a>
-
-    </div>
-
-
-    <?php include '../../views/header-footer/footer.php>' ?>
+<?php include '../../views/header-footer/footer.php>' ?>

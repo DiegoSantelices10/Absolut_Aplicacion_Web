@@ -104,21 +104,26 @@ $query = $this->db->prepare('UPDATE bebidas SET Nombre=:nombre, Cantidad=:cantid
     ':nombre' => $_GET["nombre"],
     ':precioventa' => $_GET["precio"],
     ':cantidad' => $_GET["cantidad"],
-    ':id' => $_GET["id"]
+    ':id' => $_GET["id"],
+    ':imagen' => $_GET["img"],
+    ':imgfondo' => $_GET["bg-img"]
     ]);
 
 }
 
 
 public function agregarProducto(){
-    $query = $this->db->prepare("INSERT INTO bebidas (Nombre, Cantidad, Precioventa) VALUES (:nombre,:cantidad,:precioventa)");
+    $query = $this->db->prepare("INSERT INTO bebidas (nombre, cantidad, precioventa, categoriaID, imagen, imgfondo) 
+                                              VALUES (:nombre,:cantidad,:precioventa, :categoriaID, :imagen, :imgfondo)");
 
     $query->execute(
         [
-            ':nombre' => $_POST["nombre"],
-            ':precioventa' => $_POST["precio"],
-            ':cantidad' => $_POST["cantidad"]
-            
+            ':nombre' => $_GET["nombre"],
+            ':cantidad' => $_GET["cantidad"],
+            ':precioventa' => $_GET["precioventa"],
+            ':categoriaID' => $_GET["categoriaID"],
+            ':imagen' => $_GET["imagen"],
+            ':imgfondo' => $_GET["imgfondo"]
         ]);
         
 

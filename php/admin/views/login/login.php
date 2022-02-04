@@ -32,6 +32,7 @@
 
 
 		<button type="submit" class="btn btn-primary mt-2">INGRESAR</button>
+		<a class="btn btn-outline-primary mt-2" style="color: white" href="../login/crear-usuario.php" role="button">CREA UNA CUENTA</a>
 	</form>
 
 </div>

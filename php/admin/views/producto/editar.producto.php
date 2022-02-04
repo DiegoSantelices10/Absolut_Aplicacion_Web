@@ -4,44 +4,54 @@ require '../../controllers/producto/editar.producto.controllers.php';
 include '../../views/header-footer/header.php'
 ?>
 
+<div class="container form-box-user1">
 
-<h2 class="ml-3 float-left usuario">Bienvenido <i class="usuariose"><?php echo $_SESSION['usuario']  ?></i></h2>
+    <div class="form-create-user1">
 
-<div class="container">
-	<div class="row text-center login-page">
-		<div class="col-md-12 login-form">
-			<form action="../../controllers/producto/update.controllers.php" method="get">
-				<div class="row">
-					<div class="col-md-12 login-form-header">
-						<p class="login-form-font-header">Actulizar Producto</span>
-						<p>
-					</div>
+        <form action="../../controllers/producto/update.controllers.php" method="GET" role="form">
+            <legend>ACTUALIZAR PRODUCTO</legend>
 
-				</div>
-				<div class="row">
-					<div class="col-md-12 login-from-row">
-						<input name="nombre" type="text" id="nombre" value="<?php echo $producto->nombre ?>" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 login-from-row">
-						<input name="cantidad" type="text" id="cantidad" value="<?php echo $producto->cantidad ?>" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 login-from-row">
-						<input name="precio" type="text" id="precioventa" value="<?php echo $producto->precioventa ?>" />
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 login-from-row">
-						<button class="btn btn-info">Aplicar cambios</button>
-					</div>
-				</div>
-				<input type="hidden" name="id" value="<?php echo $producto->id ?>">
-			</form>
-		</div>
-	</div>
+            <div class="form-group row">
+                <div class="col-6">
+                    <label for="">NOMBRE</label>
+                    <input type="text" class="form-control " name="usuario" value="<?php echo $producto->nombre ?>" required>
+                </div>
+                <div class="col-6">
+                    <label for="">CANTIDAD</label>
+                    <input type="text" class="form-control " name="cantidad" value="<?php echo $producto->cantidad ?>" required>
+                </div>
+            </div>
+			<div class="form-group row">
+                <div class="col-6">
+                    <label for="">PRECIO</label>
+                    <input type="text" class="form-control " name="precio" value="<?php echo $producto->precioventa ?>" required>
+                </div>
+                <div class="col-6">
+                    <label for="">CATEGORIA</label>
+                    <input type="text" class="form-control " name="categoria" value="<?php echo $producto->categoriaID ?>" required>
+                </div>
+            </div>
+
+			<div class="form-group row">
+                <div class="col-6">
+                    <label for="">IMAGEN PRODUCTO</label>
+                    <input type="file"  name="img" >
+                </div>
+                <div class="col-6">
+                    <label for="">IMAGEN BACKGROUND</label>
+                    <input type="file"  name="background" >
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary mt-2">ACTUALIZAR</button>
+           
+        </form>
+
+    </div>
+
 </div>
+
+
 
 <?php include '../../views/header-footer/footer.php' ?>

@@ -8,11 +8,7 @@ require __DIR__. '../../../models/Bebida.php';
 
 $bebida = new bebida;
 
-
-
-
-
-$actualizado= $bebida->updateProducto();
+$actualizado = $bebida->updateProducto();
 
 
 
