@@ -58,15 +58,13 @@ $query->execute();
 
 $pagina=$query->fetchAll(PDO::FETCH_OBJ);
 
-
 return $pagina;
 }
 
 public function count(): int
 {
 
-
-    $query = $this->db->prepare("SELECT count(id) as total FROM bebidas");
+$query = $this->db->prepare("SELECT count(id) as total FROM bebidas");
  
 $query->execute();
 
@@ -98,15 +96,17 @@ return $producto;
 }
 public function updateProducto(){
 
-$query = $this->db->prepare('UPDATE bebidas SET Nombre=:nombre, Cantidad=:cantidad, Precioventa =:precioventa WHERE id=:id');
+$query = $this->db->prepare('UPDATE bebidas SET nombre=:nombre, cantidad=:cantidad, 
+                                    precioventa =:precioventa,
+                                    imagen=:imagen, imgfondo=:imgfondo  WHERE id=:id');
 
  $query->execute([
+     ':id' => $_GET["id"],
     ':nombre' => $_GET["nombre"],
-    ':precioventa' => $_GET["precio"],
-    ':cantidad' => $_GET["cantidad"],
-    ':id' => $_GET["id"],
-    ':imagen' => $_GET["img"],
-    ':imgfondo' => $_GET["bg-img"]
+            ':cantidad' => $_GET["cantidad"],
+            ':precioventa' => $_GET["precioventa"],
+            ':imagen' => $_GET["imagen"],
+            ':imgfondo' => $_GET["imgfondo"]
     ]);
 
 }

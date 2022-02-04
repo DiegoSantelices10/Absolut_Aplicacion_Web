@@ -18,4 +18,4 @@ $_SESSION['alert'] = [
 
 ];
 
-header('location: ../../views/producto/agregar.php');
+header('location: ../../views/producto/edit.php');
