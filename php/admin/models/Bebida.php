@@ -47,20 +47,6 @@ return $lista;
 }
 
 
-public function paginate($cuantos = 5)
-{
-$pagina = $_GET['pagina'] ?? 1;
-    $desde = ($pagina-1) * $cuantos;
-
-    $query = $this->db->prepare("SELECT * FROM bebidas limit $cuantos offset $desde");
-
-$query->execute();
-
-$pagina=$query->fetchAll(PDO::FETCH_OBJ);
-
-return $pagina;
-}
-
 public function count(): int
 {
 
@@ -136,6 +122,27 @@ public function deleteProducto(){
         
 
 }
+
+
+
+
+
+
+
+public function paginacion($cantidad_de_paginas){
+$iniciar = ($_GET['pagina']-1) * $cantidad_de_paginas;
+        
+$query = $this->db->prepare('SELECT * FROM bebidas limit :inicar , :nproductos');
+$query->bindParam(':inicar', $iniciar, PDO::PARAM_INT);
+$query->bindParam(':nproductos', $cantidad_de_paginas, PDO::PARAM_INT);
+$query->execute();
+
+$resultado= $query->fetchAll(PDO::FETCH_OBJ);
+
+
+return $resultado;
+}
+
 
 
 }

@@ -8,7 +8,7 @@ include '../../views/header-footer/header.php';
 
     <div class="box_user_search container-fluid">
         <div class="welcome_user">
-            <h2>Bienvenido s <?php echo $_SESSION['usuario'] ?></h2>
+            <h4>Bienvenido  <?php echo $_SESSION['usuario'] ?></h4>
         </div>
 
         <div class="search_prod">
@@ -24,7 +24,7 @@ include '../../views/header-footer/header.php';
     </div>
 
     <div class="titulo-productos">
-        <p class="text-center">NUESTROS PRODUCTOS</p>
+        <p class="text-center">bauty gallina</p>
     </div>
 
 
