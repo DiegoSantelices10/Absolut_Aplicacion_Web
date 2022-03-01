@@ -5,7 +5,7 @@ include '../../views/header-footer/header.php'
 
 
 <div class="edit container">
-	<?php include '../../session/message.agregar.php' ?>
+    <?php include '../../session/message.agregar.php' ?>
 </div>
 
 <div class="container form-box-user1">
@@ -30,8 +30,13 @@ include '../../views/header-footer/header.php'
                     <input type="text" class="form-control " name="precioventa" required>
                 </div>
                 <div class="col-6">
-                    <label for="">CATEGORIA</label>
-                    <input type="text" class="form-control " name="categoriaID" required>
+                <label for="">CATEGORIA</label>
+                    <select class="form-select form-control" aria-label="Default select example" name="categoriaID">
+                        <option value="1">Citricos</option>
+                        <option value="2">Colors</option>
+                        <option value="3">Frutales</option>
+                        <option value="3">Clasicos</option>
+                    </select>
                 </div>
             </div>
 
@@ -47,7 +52,7 @@ include '../../views/header-footer/header.php'
             </div>
 
 
-            <button type="submit" class="btn btn-primary mt-2">ACTUALIZAR</button>
+            <button type="submit" class="btn btn-primary mt-2">AGREGAR</button>
 
         </form>
 

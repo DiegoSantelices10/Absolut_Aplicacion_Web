@@ -206,6 +206,8 @@ table {
 }
 
 .producto {
+    height: 431px;
+    width: 200px;
     text-align: center;
     margin: 10px; 
       transition: background-color .8s;

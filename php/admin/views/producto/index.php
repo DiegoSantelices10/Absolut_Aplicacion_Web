@@ -24,7 +24,7 @@ include '../../views/header-footer/header.php';
     </div>
 
     <div class="titulo-productos">
-        <p class="text-center">bauty gallina</p>
+        <p class="text-center">ABSOLUT</p>
     </div>
 
 
@@ -34,7 +34,7 @@ include '../../views/header-footer/header.php';
     <div class="producto">
         <p class="titulo-producto"> <?php echo $producto->nombre ?></p>
         <a>
-            <img data-toggle="modal" data-target="#modal<?php echo $producto->id ?>" class="p-1 img-responsive z-depth-1 "
+            <img data-toggle="modal" data-target="#modal<?php echo $producto->id ?>" style="height: 370px; width: 200px" class="p-1 img-responsive z-depth-1 "
                 src="../../../../img/<?php echo $producto->imagen ?>" alt="absolut">
         </a>
     </div>
