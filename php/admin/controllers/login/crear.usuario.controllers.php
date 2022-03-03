@@ -22,4 +22,4 @@ echo 'usuario registrado';
 
 
 
-header('location: ../../views/login/login.php');
+header('location: ../../../../index.php');

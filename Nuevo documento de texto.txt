@@ -1,2 +1,0 @@
-1. Importar base de datos de la carpeta database
-2. Ruta de acceso http://localhost/absolut_aplicacion_web/php/admin/views/login/crear-usuario.php

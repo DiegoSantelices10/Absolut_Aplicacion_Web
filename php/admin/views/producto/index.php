@@ -8,7 +8,7 @@ include '../../views/header-footer/header.php';
 
     <div class="box_user_search container-fluid">
         <div class="welcome_user">
-            <h4>Bienvenido  <?php echo $_SESSION['usuario'] ?></h4>
+            <h5>Bienvenido  <?php echo $_SESSION['usuario'] ?></h5>
         </div>
 
         <div class="search_prod">
