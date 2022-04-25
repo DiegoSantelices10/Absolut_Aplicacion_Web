@@ -12,6 +12,7 @@
 </head>
 
 <body id="crearusuario">
+    
     <div class="container form-box-user">
 
         <div class="form-create-user">
@@ -29,7 +30,7 @@
                 </div>
 
 
-                <button type="submit" class="btn btn-primary mt-2">CREAR CUENTA</button>
+                <button type="submit" class="btn btn-primary mt-3 w-100">CREAR CUENTA</button>
             </form>
 
         </div>

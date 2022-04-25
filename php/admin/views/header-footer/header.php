@@ -13,12 +13,10 @@
 </head>
 
 <body>
-
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="navegation">
+        <nav class="navbar navbar-expand-lg navbar-dark h-auto w-100">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" href="../producto/index.php">ABSOLUT.</a>
@@ -27,14 +25,10 @@
                         <a class="nav-item nav-link active" href="../producto/index.php">HOME</a>
                         <a class="nav-item nav-link active" href="../producto/edit.php">EDITAR</a>
                         <a class="nav-item nav-link active" href="../producto/agregar.php">AGREGAR</a>
-                        <a class="nav-item nav-link active"
-                            href="../../controllers/login/cerrar.sesion.controllers.php">CERRAR SESION</a>
-                           
+                        <a class="nav-item nav-link active" href="../../controllers/login/cerrar.sesion.controllers.php">CERRAR SESION</a>
+
                     </div>
                 </div>
             </div>
         </nav>
-    </header>
-
-
-    <?php  include '../../session/acceso.php'?>
+    </div>

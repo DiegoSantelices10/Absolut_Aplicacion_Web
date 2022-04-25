@@ -1,7 +1,6 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -12,37 +11,32 @@
 	<link rel="stylesheet" href="./vendor/fontawesome-free-5.9.0-web/css/all.css">
 </head>
 
-<body id="login">
-<div class="container form-box-user">
+<body>
+	<section id="login-bg">
+	<div class="form-box-user">
+		<div class="form-create-user">
+			<form action="./php/admin/controllers/login/login.controllers.php" method="POST" role="form">
+				<legend>BIENVENIDO</legend>
 
-<div class="form-create-user">
+				<div class="form-group">
+					<?php include './php/admin/session/message.login.php'; ?>
+					<label for="">Usuario</label>
+					<input type="text" class="form-control" name="usuario" required>
+				</div>
+				<div class="form-group">
+					<label for="">Password</label>
+					<input type="password" class="form-control" name="password" required>
+				</div>
 
-	<form action="./php/admin/controllers/login/login.controllers.php" method="POST" role="form">
-		<legend>INGRESA A TU CUENTA</legend>
 
-		<div class="form-group">
-		<?php include './php/admin/session/message.login.php'; ?>
-			<label for="">Usuario</label>
-			<input type="text" class="form-control" name="usuario" required>
+				<button type="submit" class="btn btn-primary w-100 mt-3 ">Iniciar sesion</button>
+			</form>
+			<div>
+				<a class="btn btn-outline-primary w-100 mt-3" style="color: white" href="./php/admin/views/login/crear-usuario.php" role="button">Registrate</a>
+			</div>
 		</div>
-		<div class="form-group">
-			<label for="">Password</label>
-			<input type="password" class="form-control" name="password" required>
-		</div>
-
-
-		<button type="submit" class="btn btn-primary mt-2">INGRESAR</button>
-		<a class="btn btn-outline-primary mt-2" style="color: white" href="./php/admin/views/login/crear-usuario.php" role="button">CREA UNA CUENTA</a>
-	</form>
-
-</div>
-
-</div>
-
-
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	</div>
+	</section>
 	<script src="./js/jquery-3.3.1.slim.min.js"></script>
 	<script src="./js/popper.min.js"></script>
 	<script src="./js/bootstrap.js"></script>

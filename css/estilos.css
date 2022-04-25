@@ -1,19 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700;800&display=swap');
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
 }
 
 body {
-    background-color: white;
+   height: 100vh;
+   width: 100%;
+   background: white;
+    
+}
+.navegation {
+    font-weight: 700;
 }
 
-header {
-    font-weight: 100;
-    background: rgb(7, 42, 117);
+#login-bg {
+    background-image: url(../img/clasico.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
 }
+
+
+
 
 .navbar {
     background: rgb(7, 42, 117);
@@ -25,15 +37,16 @@ header {
     justify-content: center;
     align-items: center;
     color: white;
-    width: 80%;
+    height: 100vh;
+    width: 100vw;
     
 }
 
 .form-create-user {
     background: rgba(51, 51, 160, 0.836);
-    padding: 1.5rem;
-    margin-top: 8rem;
+    padding: 40px;
     text-align: center ;
+    width: 400px;
     
 }
 
@@ -57,13 +70,6 @@ header {
 
 
 
-.box_user_search {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 4rem;
-    
-}
 
 .search_prod {
     display: flex;
@@ -95,12 +101,11 @@ header {
 
 
 
-.titulo-productos {
-    
-   font-size: 54px;
-   font-weight: bold;
+.titulo-productos {   
     color: rgb(7, 42, 117) ;
-    margin: 1rem;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
 }
 
 .imagen-modal {
@@ -138,13 +143,7 @@ height: 100vh;
 }
 
 
-#login {
-    background-image: url(../img/clasico.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-}
+
 
 #agregar-producto {
     height: 100vh;
@@ -211,6 +210,7 @@ table {
     width: 200px;
     text-align: center;
     margin: 10px; 
+    margin-bottom: 20px;
       transition: background-color .8s;
 }
 
